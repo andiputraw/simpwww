@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Jetbrains Mono"; 
+}
+
+/* #md-content {
+  @apply text-white prose prose-invert max-w-none;
+} */
+
+/* Headings */
+#md-content h1 {
+  @apply text-3xl font-bold text-white border-b border-neutral-700 pb-2;
+}
+
+#md-content h2 {
+  @apply text-2xl font-semibold text-neutral-300 mt-6;
+}
+
+#md-content h3 {
+  @apply text-xl font-semibold text-neutral-400 mt-4;
+}
+
+/* Paragraphs */
+#md-content p {
+  @apply text-neutral-300 leading-relaxed my-4;
+}
+
+/* Lists */
+#md-content ul {
+  @apply list-disc list-inside my-4 pl-4 text-neutral-300;
+}
+
+#md-content ol {
+  @apply list-decimal list-inside my-4 pl-4 text-neutral-300;
+}
+
+#md-content li {
+  @apply my-1;
+}
+
+/* Links */
+#md-content a {
+  @apply text-blue-400 hover:text-blue-300 underline;
+}
+
+/* Code Blocks */
+#md-content pre {
+  @apply bg-neutral-900 text-neutral-200 p-4 rounded-md overflow-x-auto my-4;
+}
+
+#md-content code {
+  @apply bg-neutral-800 text-pink-400 px-1 py-0.5 rounded;
+}
+
+/* Blockquotes */
+#md-content blockquote {
+  @apply border-l-4 border-neutral-600 pl-4 italic text-neutral-400 my-4;
+}
+
+/* Tables */
+#md-content table {
+  @apply w-full border-collapse border border-neutral-700 text-neutral-300;
+}
+
+#md-content th {
+  @apply border border-neutral-700 bg-neutral-800 px-4 py-2 font-semibold;
+}
+
+#md-content td {
+  @apply border border-neutral-700 px-4 py-2;
+}
+
+/* Horizontal Rule */
+#md-content hr {
+  @apply border-t border-neutral-700 my-6;
+}
+
+#md-content strong {
+  @apply font-bold;
+}

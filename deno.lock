@@ -1,0 +1,64 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@cascades/markdown-parser@0.1": "0.1.0",
+    "jsr:@hono/hono@^4.7.2": "4.7.2",
+    "jsr:@std/assert@1": "1.0.11",
+    "jsr:@std/collections@^1.0.11": "1.0.11",
+    "jsr:@std/front-matter@^1.0.9": "1.0.9",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
+    "jsr:@std/toml@^1.0.3": "1.0.5",
+    "jsr:@std/yaml@^1.0.5": "1.0.6",
+    "npm:marked@^15.0.7": "15.0.7"
+  },
+  "jsr": {
+    "@cascades/markdown-parser@0.1.0": {
+      "integrity": "0e2e424da17d1e9706fb8ab1f67b40af6c2355ce8c6b96f7d743f36fbf1df145"
+    },
+    "@hono/hono@4.7.2": {
+      "integrity": "73466a24bd6eb3b527cde18e59ca5543890ddacb4312fc0bc7504d28a7e57a38"
+    },
+    "@std/assert@1.0.11": {
+      "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/collections@1.0.11": {
+      "integrity": "2f62cf9587484b1fff364f6c3e1f83478eea53dbb6faed6ffeda92ddb6b172f0"
+    },
+    "@std/front-matter@1.0.9": {
+      "integrity": "ee6201d06674cbef137dda2252f62477450b48249e7d8d9ab57a30f85ff6f051",
+      "dependencies": [
+        "jsr:@std/toml",
+        "jsr:@std/yaml"
+      ]
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    },
+    "@std/toml@1.0.5": {
+      "integrity": "08061156e9c5716443a144b6e40a8668738b8b424ad99ab0b6fdf1b6ea4da806",
+      "dependencies": [
+        "jsr:@std/collections"
+      ]
+    },
+    "@std/yaml@1.0.6": {
+      "integrity": "c9a5a914e1d51c46756cb10e356710035cfa905e713c90d3b711413fd3aead27"
+    }
+  },
+  "npm": {
+    "marked@15.0.7": {
+      "integrity": "sha512-dgLIeKGLx5FwziAnsk4ONoGwHwGPJzselimvlVskE9XLN4Orv9u2VA3GWw/lYUqjfA0rUT/6fqKwfZJapP9BEg=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@cascades/markdown-parser@0.1",
+      "jsr:@hono/hono@^4.7.2",
+      "jsr:@std/assert@1",
+      "jsr:@std/front-matter@^1.0.9",
+      "npm:marked@^15.0.7"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "tasks": {
+    "dev-web": "deno serve --watch --allow-read server/main.tsx ",
+    "dev-tailwind": "./tailwind.sh",
+    "dev": {
+      "command": "",
+      "dependencies": ["dev-web", "dev-tailwind"]
+    },
+    "gen:html": "deno run --allow-read --allow-write bin/converter.ts",
+    "tailwind": "./tailwind.sh"
+  },
+  "imports": {
+    "@std/front-matter": "jsr:@std/front-matter@^1.0.9",
+    "marked": "npm:marked@^15.0.7",
+    "~/generated/": "./generated/",
+    "@cascades/markdown-parser": "jsr:@cascades/markdown-parser@^0.1.0",
+    "@hono/hono": "jsr:@hono/hono@^4.7.2",
+    "@std/assert": "jsr:@std/assert@1"
+  },
+
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "@hono/hono/jsx",
+    "lib": [
+      "deno.window",
+      "dom"
+    ]
+  },
+  "lint": {
+    "rules": { "tags": ["recommended", "jsr"], "include": ["camelcase","eqeqeq", "no-self-compare", "no-undef"] }
+  }
+}
