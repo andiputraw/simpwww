@@ -76,7 +76,7 @@ const Layout: FC = (props) => {
         <meta name="author" content="andiputraw" />
         <title>Andiputraw {param.getMetaTitle() === "" ? "" : `| ${param.getMetaTitle()}`}</title>
 
-        
+     
 
         {/* Open Graph */}
         <meta property="og:title" content={`${param.getMetaTitle()}`} />
@@ -99,6 +99,9 @@ const Layout: FC = (props) => {
         <link rel="stylesheet" href="/static/output.css" />
         <link rel="stylesheet" href="/static/style.css" />
         <script type="module" defer={true} src="/static/script.js"></script>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-1R0DRW43FS"></script>
+        <script src="/static/analytic.js" ></script>
       </head>
       <body class="bg-neutral-800 text-white font-mono  ">
         <main class="h-full max-w-4xl m-auto  ">
