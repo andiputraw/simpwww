@@ -83,13 +83,13 @@ const Layout: FC = (props) => {
         <meta property="og:description" content={param.GetMetaSummary() ?? "Summary for this page is unavailable"} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={param.url.toString() } />
-        <meta property="og:image" content={param.meta.thumbnail ?? ""} />
+        <meta property="og:image" content={param.meta.thumbnail !== "" ? `${param.url.protocol}//${param.url.host}/static/thumbnail/${param.meta.thumbnail}` : ""} />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={param.getMetaTitle()} />
         <meta name="twitter:description" content={param.GetMetaSummary() ?? "Summary for this page is unavailable"} />
-        <meta name="twitter:image" content={param.meta.thumbnail ?? ""} />
+        <meta name="twitter:image" content={param.meta.thumbnail !== "" ? `${param.url.protocol}//${param.url.host}/static/thumbnail/${param.meta.thumbnail}` : ""} />
 
         {/* Syntax Highlighter */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css"/>
@@ -153,9 +153,9 @@ const Footer: FC = () => {
         </p>
 
         <div class="flex gap-4">
-          <a href="/home" class="hover:underline">About</a>
-          <a href="/contact" class="hover:underline">Contact</a>
-          <a href="/privacy" class="hover:underline">Privacy</a>
+          <a href="/about" class="hover:underline">About</a>
+          {/* <a href="/contact" class="hover:underline">Contact</a> */}
+          {/* <a href="/privacy" class="hover:underline">Privacy</a> */}
         </div>
       </div>
     </footer>
